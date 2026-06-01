@@ -56,7 +56,31 @@
 ### Step 11:
   Stop
 # Program:
+#include <stdio.h>
+
+int main() {
+    float math, science, english, average;
+    printf("Enter marks for Math, Science, and English: ");
+    scanf("%f %f %f", &math, &science, &english);
+    average = (math + science + english) / 3.0;
+    printf("Average marks: %.2f\n", average);
+    if (average >= 90.0f) {
+        printf("Grade: A\n");
+    } else if (average >= 75.0f && average < 90.0f) {
+        printf("Grade: B\n");
+    } else if (average >= 50.0f && average < 75.0f) {
+        printf("Grade: C\n");
+    } else {
+        printf("Grade: F\n");
+    }
+
+    return 0;
+}
+
 # Output:
+<img width="592" height="280" alt="image" src="https://github.com/user-attachments/assets/c829ad0e-dbec-466b-a1d7-e2d6d6e5e6d7" />
+
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -88,7 +112,26 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 
 # Program:
+#include <stdio.h>
+
+int main()
+{
+    int num = 15;
+
+    printf("Multiplication Table of %d:\n", num);
+
+    for(int i = 1; i <= 10; i++)
+    {
+        printf("%d x %d = %d\n", num, i, num * i);
+    }
+
+    return 0;
+}
+
 # Output:
+<img width="1473" height="482" alt="image" src="https://github.com/user-attachments/assets/bc0eea83-a105-469a-9ed1-5fb414af1718" />
+
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -131,7 +174,36 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    int num, i;
+    bool isPrime = true;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (num <= 1) {
+        isPrime = false; 
+    } else {
+        for (i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+    }
+
+    if (isPrime)
+        printf("%d is a prime number.\n", num);
+    else
+        printf("%d is not a prime number.\n", num);
+
+    return 0;
+}
 # Output:
+<img width="510" height="232" alt="image" src="https://github.com/user-attachments/assets/2857aeca-2e2d-41d8-9f90-b537776d3700" />
+
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -179,7 +251,32 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+#include<stdio.h>
+int main()
+{
+    int N,row,col;
+    scanf("%d",&N);
+    for(row=1;row<=N;row++){
+        for(col=1;col<=N;col++){
+            if(row==1)
+            printf("%d",col);
+            else if(col==1)
+            printf("%d",row);
+            else if(row==N)
+            printf("%d",N-col+1);
+            else if(col==N)
+            printf("%d",N-row+1);
+            else
+            printf(" ");
+        }
+        printf("\n");
+    }
+    return 0;
+    
+}
 # Output:
+<img width="546" height="277" alt="image" src="https://github.com/user-attachments/assets/8e8d4a35-f4b9-48f7-9720-b709f08cd39c" />
+
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -232,6 +329,29 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+# Program:
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+    printf("0\n\n");
+    for (i = 7; i >= 1; i--)
+    {
+        for (j = i; j <= 7; j++)
+            printf("%d  ", j);
+        printf("0  ");
+        for (j = 7; j >= i; j--)
+            printf("%d  ", j);
+
+        printf("\n\n");
+    }
+
+    return 0;
+}
+# Output:
+<img width="1325" height="587" alt="image" src="https://github.com/user-attachments/assets/548706fd-e91c-4b84-84e1-bc3b1956ba30" />
+
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
